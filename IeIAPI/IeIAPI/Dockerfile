@@ -44,6 +44,7 @@ RUN apt-get update && apt-get install -y \
     libc6 \
     libgtk-3-0 \
     xvfb \
+    packagekit-gtk3-module \  # Agregar esta línea para instalar packagekit-gtk3-module
     && rm -rf /var/lib/apt/lists/*
 
 # Instalar librerías adicionales necesarias para Firefox en modo sin cabeza
