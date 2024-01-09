@@ -1,3 +1,13 @@
+# Etapa de construcción
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+WORKDIR /src
+
+COPY ./IeIAPI.csproj .
+RUN dotnet restore
+
+COPY . .
+RUN dotnet build -c Release -o /app/build
+
 # Etapa intermedia para instalar dependencias
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS install-dependencies
 WORKDIR /app
@@ -59,10 +69,9 @@ WORKDIR /app
 # Copiar los archivos publicados desde la fase de publicación
 COPY --from=publish /app/publish .
 
-# Copiar los archivos de la etapa de instalación
-COPY --from=install-dependencies /usr/bin/firefox /usr/bin/
-COPY --from=install-dependencies /usr/local/bin/geckodriver /usr/local/bin/
-
+# Exponer los puertos
 EXPOSE 5000
 EXPOSE 56581
+
+# Comando para ejecutar la aplicación al iniciar el contenedor
 CMD ["dotnet", "IeIAPI.dll"]
