@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Http.Features;
+using Microsoft.OpenApi.Models;
 
 namespace IeIAPI
 {
@@ -42,11 +43,12 @@ namespace IeIAPI
                                       .AllowAnyMethod()
                                       .AllowAnyHeader());
             });
-               services.AddSwaggerGen(c =>
-    {
-        c.SwaggerDoc("v1", new OpenApiInfo { Title = "Mi API", Version = "v1" });
-        // Otras configuraciones si son necesarias
-    });
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "APIJSON", Version = "v1" });
+                // Otras configuraciones si son necesarias
+            });
 
             services.AddControllers();
         }
@@ -68,12 +70,13 @@ namespace IeIAPI
                     await next.Invoke();
                 });
             }
-               app.UseSwagger();
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Mi API V1");
-        c.RoutePrefix = string.Empty; // Para servir la UI de Swagger en la raíz
-    });
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "APIJSON");
+                c.RoutePrefix = string.Empty; // Para servir la UI de Swagger en la raíz
+            });
 
             // Configuración adicional...
 
