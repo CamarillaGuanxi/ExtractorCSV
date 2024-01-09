@@ -8,21 +8,54 @@ RUN dotnet restore
 COPY . .
 RUN dotnet build -c Release -o /app/build
 
-# Use ADD to copy CSV and XML files
-COPY ./CV.csv .
-COPY ./CAT.xml .
-
 # Etapa intermedia para instalar dependencias
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS install-dependencies
 WORKDIR /app
 
-# Instalar dependencias, por ejemplo, curl, gnupg, y libglib2.0-0
-RUN apt-get update && apt-get install -y curl gnupg libglib2.0-0
+RUN apt-get update && apt-get install -y \
+    wget \
+    unzip \
+    libgdiplus \
+    libxss1 \
+    libappindicator3-1 \
+    libasound2 \
+    libatk1.0-0 \
+    libatk-bridge2.0-0 \
+    libnss3 \
+    libgdk-pixbuf2.0-0 \
+    libgtk-3-0 \
+    libx11-xcb1 \
+    libxcb-dri3-0 \
+    fonts-liberation \
+    libgbm1 \
+    libpango-1.0-0 \
+    libpangocairo-1.0-0 \
+    libxcursor1 \
+    libxdamage1 \
+    libxi6 \
+    libxcomposite1 \
+    libxrandr2 \
+    libxss1 \
+    libxtst6 \
+    xdg-utils \
+    libfreetype6 \
+    libharfbuzz-icu0 \
+    libfontconfig1 \
+    libc6 \
+    xvfb \
+    && rm -rf /var/lib/apt/lists/*
 
-# Descargar e instalar Google Chrome
-RUN curl -sSL https://dl.google.com/linux/linux_signing_key.pub | gpg --dearmor -o /usr/share/keyrings/google-chrome-archive-keyring.gpg
-RUN echo "deb [signed-by=/usr/share/keyrings/google-chrome-archive-keyring.gpg arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | tee /etc/apt/sources.list.d/google-chrome.list > /dev/null
-RUN apt-get update && apt-get install -y google-chrome-stable
+# Descargar e instalar Firefox y GeckoDriver
+RUN apt-get update \
+    && apt-get install -y firefox-esr \
+    && wget -O /tmp/geckodriver.tar.gz https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux64.tar.gz \
+    && tar -zxf /tmp/geckodriver.tar.gz -C /usr/local/bin \
+    && rm /tmp/geckodriver.tar.gz \
+    && chmod +x /usr/local/bin/geckodriver
+
+# Configurar el entorno sin cabeza
+ENV DISPLAY=:99
+ENV PATH="${PATH}:/usr/local/bin"
 
 # Etapa de publicación
 FROM build AS publish
@@ -36,9 +69,9 @@ WORKDIR /app
 COPY --from=publish /app/publish .
 
 # Copiar los archivos de la etapa de instalación
-COPY --from=install-dependencies /usr/bin/google-chrome-stable /usr/bin/
+COPY --from=install-dependencies /usr/bin/firefox /usr/bin/
+COPY --from=install-dependencies /usr/local/bin/geckodriver /usr/local/bin/
 
-# Definir el punto de entrada para la aplicación
 EXPOSE 5000
 EXPOSE 56581
 CMD ["dotnet", "IeIAPI.dll"]

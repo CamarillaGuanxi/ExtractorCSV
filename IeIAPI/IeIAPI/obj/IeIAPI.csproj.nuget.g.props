@@ -18,8 +18,12 @@
     <Import Project="$(NuGetPackageRoot)microsoft.visualstudio.azure.containers.tools.targets\1.19.4\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props" Condition="Exists('$(NuGetPackageRoot)microsoft.visualstudio.azure.containers.tools.targets\1.19.4\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgWebDriverChromeDriver Condition=" '$(PkgWebDriverChromeDriver)' == '' ">C:\Users\Administrador.WIN-2O4P6U7CI32\.nuget\packages\webdriverchromedriver\2.10.0</PkgWebDriverChromeDriver>
+    <PkgWebDriver_ChromeDriver Condition=" '$(PkgWebDriver_ChromeDriver)' == '' ">C:\Users\Administrador.WIN-2O4P6U7CI32\.nuget\packages\webdriver.chromedriver\26.14.313457.1</PkgWebDriver_ChromeDriver>
     <PkgMicrosoft_Extensions_ApiDescription_Server Condition=" '$(PkgMicrosoft_Extensions_ApiDescription_Server)' == '' ">C:\Users\Administrador.WIN-2O4P6U7CI32\.nuget\packages\microsoft.extensions.apidescription.server\6.0.5</PkgMicrosoft_Extensions_ApiDescription_Server>
+    <PkgSelenium_Mozilla_Firefox_Webdriver Condition=" '$(PkgSelenium_Mozilla_Firefox_Webdriver)' == '' ">C:\Users\Administrador.WIN-2O4P6U7CI32\.nuget\packages\selenium.mozilla.firefox.webdriver\0.6.0.1</PkgSelenium_Mozilla_Firefox_Webdriver>
     <PkgMicrosoft_VisualStudio_Azure_Containers_Tools_Targets Condition=" '$(PkgMicrosoft_VisualStudio_Azure_Containers_Tools_Targets)' == '' ">C:\Users\Administrador.WIN-2O4P6U7CI32\.nuget\packages\microsoft.visualstudio.azure.containers.tools.targets\1.19.4</PkgMicrosoft_VisualStudio_Azure_Containers_Tools_Targets>
+    <PkgFirefox Condition=" '$(PkgFirefox)' == '' ">C:\Users\Administrador.WIN-2O4P6U7CI32\.nuget\packages\firefox\3.6.6</PkgFirefox>
     <PkgChromium_ChromeDriver Condition=" '$(PkgChromium_ChromeDriver)' == '' ">C:\Users\Administrador.WIN-2O4P6U7CI32\.nuget\packages\chromium.chromedriver\2.37.0</PkgChromium_ChromeDriver>
   </PropertyGroup>
 </Project>

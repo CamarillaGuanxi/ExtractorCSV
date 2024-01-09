@@ -30,6 +30,9 @@
           "lib/netstandard2.0/SeleniumExtras.WaitHelpers.dll": {}
         }
       },
+      "Firefox/3.6.6": {
+        "type": "package"
+      },
       "Google.Protobuf/3.21.9": {
         "type": "package",
         "compile": {
@@ -288,6 +291,15 @@
         "build": {
           "build/Selenium.Chrome.WebDriver.targets": {}
         }
+      },
+      "Selenium.Firefox.WebDriver/0.27.0": {
+        "type": "package",
+        "build": {
+          "build/Selenium.Firefox.WebDriver.targets": {}
+        }
+      },
+      "Selenium.Mozilla.Firefox.Webdriver/0.6.0.1": {
+        "type": "package"
       },
       "Selenium.Support/4.16.2": {
         "type": "package",
@@ -793,6 +805,12 @@
           }
         }
       },
+      "WebDriver.ChromeDriver/26.14.313457.1": {
+        "type": "package"
+      },
+      "WebDriverChromeDriver/2.10.0": {
+        "type": "package"
+      },
       "ZstdSharp.Port/0.7.1": {
         "type": "package",
         "compile": {
@@ -853,6 +871,233 @@
         "lib/net40/SeleniumExtras.WaitHelpers.dll",
         "lib/net45/SeleniumExtras.WaitHelpers.dll",
         "lib/netstandard2.0/SeleniumExtras.WaitHelpers.dll"
+      ]
+    },
+    "Firefox/3.6.6": {
+      "sha512": "nFst3tW1aa10pA5aT0mg/R1QfEqJof4AvzAR7Hza0wWMhdIHwENlfbmYFofIq3+qu7RiQKPXyc5yvMSUCPUVhg==",
+      "type": "package",
+      "path": "firefox/3.6.6",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "firefox.3.6.6.nupkg.sha512",
+        "firefox.nuspec",
+        "tools/Data/AccessibleMarshal.dll",
+        "tools/Data/README.txt",
+        "tools/Data/application.ini",
+        "tools/Data/blocklist.xml",
+        "tools/Data/browserconfig.properties",
+        "tools/Data/chrome/browser.jar",
+        "tools/Data/chrome/browser.manifest",
+        "tools/Data/chrome/classic.jar",
+        "tools/Data/chrome/classic.manifest",
+        "tools/Data/chrome/comm.jar",
+        "tools/Data/chrome/comm.manifest",
+        "tools/Data/chrome/en-US.jar",
+        "tools/Data/chrome/en-US.manifest",
+        "tools/Data/chrome/pippki.jar",
+        "tools/Data/chrome/pippki.manifest",
+        "tools/Data/chrome/reporter.jar",
+        "tools/Data/chrome/reporter.manifest",
+        "tools/Data/chrome/toolkit.jar",
+        "tools/Data/chrome/toolkit.manifest",
+        "tools/Data/components/FeedConverter.js",
+        "tools/Data/components/FeedProcessor.js",
+        "tools/Data/components/FeedWriter.js",
+        "tools/Data/components/GPSDGeolocationProvider.js",
+        "tools/Data/components/NetworkGeolocationProvider.js",
+        "tools/Data/components/WebContentConverter.js",
+        "tools/Data/components/browser.xpt",
+        "tools/Data/components/browserdirprovider.dll",
+        "tools/Data/components/brwsrcmp.dll",
+        "tools/Data/components/components.list",
+        "tools/Data/components/fuelApplication.js",
+        "tools/Data/components/jsconsole-clhandler.js",
+        "tools/Data/components/nsAddonRepository.js",
+        "tools/Data/components/nsBadCertHandler.js",
+        "tools/Data/components/nsBlocklistService.js",
+        "tools/Data/components/nsBrowserContentHandler.js",
+        "tools/Data/components/nsBrowserGlue.js",
+        "tools/Data/components/nsContentDispatchChooser.js",
+        "tools/Data/components/nsContentPrefService.js",
+        "tools/Data/components/nsDefaultCLH.js",
+        "tools/Data/components/nsDownloadManagerUI.js",
+        "tools/Data/components/nsExtensionManager.js",
+        "tools/Data/components/nsFormAutoComplete.js",
+        "tools/Data/components/nsHandlerService.js",
+        "tools/Data/components/nsHelperAppDlg.js",
+        "tools/Data/components/nsINIProcessor.js",
+        "tools/Data/components/nsLivemarkService.js",
+        "tools/Data/components/nsLoginInfo.js",
+        "tools/Data/components/nsLoginManager.js",
+        "tools/Data/components/nsLoginManagerPrompter.js",
+        "tools/Data/components/nsMicrosummaryService.js",
+        "tools/Data/components/nsPlacesAutoComplete.js",
+        "tools/Data/components/nsPlacesDBFlush.js",
+        "tools/Data/components/nsPlacesTransactionsService.js",
+        "tools/Data/components/nsPrivateBrowsingService.js",
+        "tools/Data/components/nsProxyAutoConfig.js",
+        "tools/Data/components/nsSafebrowsingApplication.js",
+        "tools/Data/components/nsSearchService.js",
+        "tools/Data/components/nsSearchSuggestions.js",
+        "tools/Data/components/nsSessionStartup.js",
+        "tools/Data/components/nsSessionStore.js",
+        "tools/Data/components/nsSetDefaultBrowser.js",
+        "tools/Data/components/nsSidebar.js",
+        "tools/Data/components/nsTaggingService.js",
+        "tools/Data/components/nsTryToClose.js",
+        "tools/Data/components/nsURLFormatter.js",
+        "tools/Data/components/nsUpdateService.js",
+        "tools/Data/components/nsUpdateServiceStub.js",
+        "tools/Data/components/nsUpdateTimerManager.js",
+        "tools/Data/components/nsUrlClassifierLib.js",
+        "tools/Data/components/nsUrlClassifierListManager.js",
+        "tools/Data/components/nsWebHandlerApp.js",
+        "tools/Data/components/pluginGlue.js",
+        "tools/Data/components/storage-Legacy.js",
+        "tools/Data/components/storage-mozStorage.js",
+        "tools/Data/components/txEXSLTRegExFunctions.js",
+        "tools/Data/crashreporter-override.ini",
+        "tools/Data/crashreporter.exe",
+        "tools/Data/crashreporter.ini",
+        "tools/Data/defaults/autoconfig/platform.js",
+        "tools/Data/defaults/autoconfig/prefcalls.js",
+        "tools/Data/defaults/pref/channel-prefs.js",
+        "tools/Data/defaults/pref/firefox-branding.js",
+        "tools/Data/defaults/pref/firefox-l10n.js",
+        "tools/Data/defaults/pref/firefox.js",
+        "tools/Data/defaults/pref/reporter.js",
+        "tools/Data/defaults/profile/bookmarks.html",
+        "tools/Data/defaults/profile/chrome/userChrome-example.css",
+        "tools/Data/defaults/profile/chrome/userContent-example.css",
+        "tools/Data/defaults/profile/localstore.rdf",
+        "tools/Data/defaults/profile/mimeTypes.rdf",
+        "tools/Data/defaults/profile/prefs.js",
+        "tools/Data/dictionaries/en-US.aff",
+        "tools/Data/dictionaries/en-US.dic",
+        "tools/Data/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/icon.png",
+        "tools/Data/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/install.rdf",
+        "tools/Data/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/preview.png",
+        "tools/Data/firefox.exe",
+        "tools/Data/freebl3.chk",
+        "tools/Data/freebl3.dll",
+        "tools/Data/greprefs/all.js",
+        "tools/Data/greprefs/security-prefs.js",
+        "tools/Data/greprefs/xpinstall.js",
+        "tools/Data/js3250.dll",
+        "tools/Data/launcher.bat",
+        "tools/Data/launcher.exe",
+        "tools/Data/modules/CertUtils.jsm",
+        "tools/Data/modules/CrashSubmit.jsm",
+        "tools/Data/modules/DownloadLastDir.jsm",
+        "tools/Data/modules/DownloadUtils.jsm",
+        "tools/Data/modules/FileUtils.jsm",
+        "tools/Data/modules/ISO8601DateUtils.jsm",
+        "tools/Data/modules/LightweightThemeConsumer.jsm",
+        "tools/Data/modules/LightweightThemeManager.jsm",
+        "tools/Data/modules/Microformats.js",
+        "tools/Data/modules/NetUtil.jsm",
+        "tools/Data/modules/NetworkPrioritizer.jsm",
+        "tools/Data/modules/PlacesDBUtils.jsm",
+        "tools/Data/modules/PluralForm.jsm",
+        "tools/Data/modules/SpatialNavigation.js",
+        "tools/Data/modules/WindowDraggingUtils.jsm",
+        "tools/Data/modules/WindowsPreviewPerTab.jsm",
+        "tools/Data/modules/XPCOMUtils.jsm",
+        "tools/Data/modules/ctypes.jsm",
+        "tools/Data/modules/debug.js",
+        "tools/Data/modules/distribution.js",
+        "tools/Data/modules/openLocationLastURL.jsm",
+        "tools/Data/modules/utils.js",
+        "tools/Data/mozcpp19.dll",
+        "tools/Data/mozcrt19.dll",
+        "tools/Data/nspr4.dll",
+        "tools/Data/nss3.dll",
+        "tools/Data/nssckbi.dll",
+        "tools/Data/nssdbm3.chk",
+        "tools/Data/nssdbm3.dll",
+        "tools/Data/nssutil3.dll",
+        "tools/Data/platform.ini",
+        "tools/Data/plc4.dll",
+        "tools/Data/plds4.dll",
+        "tools/Data/plugin-container.exe",
+        "tools/Data/plugins/npnul32.dll",
+        "tools/Data/res/EditorOverride.css",
+        "tools/Data/res/arrow.gif",
+        "tools/Data/res/arrowd.gif",
+        "tools/Data/res/broken-image.png",
+        "tools/Data/res/charsetData.properties",
+        "tools/Data/res/charsetalias.properties",
+        "tools/Data/res/contenteditable.css",
+        "tools/Data/res/designmode.css",
+        "tools/Data/res/dtd/mathml.dtd",
+        "tools/Data/res/dtd/xhtml11.dtd",
+        "tools/Data/res/entityTables/html40Latin1.properties",
+        "tools/Data/res/entityTables/html40Special.properties",
+        "tools/Data/res/entityTables/html40Symbols.properties",
+        "tools/Data/res/entityTables/htmlEntityVersions.properties",
+        "tools/Data/res/entityTables/mathml20.properties",
+        "tools/Data/res/entityTables/transliterate.properties",
+        "tools/Data/res/fonts/mathfont.properties",
+        "tools/Data/res/fonts/mathfontSTIXNonUnicode.properties",
+        "tools/Data/res/fonts/mathfontSTIXSize1.properties",
+        "tools/Data/res/fonts/mathfontStandardSymbolsL.properties",
+        "tools/Data/res/fonts/mathfontSymbol.properties",
+        "tools/Data/res/fonts/mathfontUnicode.properties",
+        "tools/Data/res/forms.css",
+        "tools/Data/res/grabber.gif",
+        "tools/Data/res/hiddenWindow.html",
+        "tools/Data/res/html.css",
+        "tools/Data/res/html/folder.png",
+        "tools/Data/res/langGroups.properties",
+        "tools/Data/res/language.properties",
+        "tools/Data/res/loading-image.png",
+        "tools/Data/res/mathml.css",
+        "tools/Data/res/quirk.css",
+        "tools/Data/res/svg.css",
+        "tools/Data/res/table-add-column-after-active.gif",
+        "tools/Data/res/table-add-column-after-hover.gif",
+        "tools/Data/res/table-add-column-after.gif",
+        "tools/Data/res/table-add-column-before-active.gif",
+        "tools/Data/res/table-add-column-before-hover.gif",
+        "tools/Data/res/table-add-column-before.gif",
+        "tools/Data/res/table-add-row-after-active.gif",
+        "tools/Data/res/table-add-row-after-hover.gif",
+        "tools/Data/res/table-add-row-after.gif",
+        "tools/Data/res/table-add-row-before-active.gif",
+        "tools/Data/res/table-add-row-before-hover.gif",
+        "tools/Data/res/table-add-row-before.gif",
+        "tools/Data/res/table-remove-column-active.gif",
+        "tools/Data/res/table-remove-column-hover.gif",
+        "tools/Data/res/table-remove-column.gif",
+        "tools/Data/res/table-remove-row-active.gif",
+        "tools/Data/res/table-remove-row-hover.gif",
+        "tools/Data/res/table-remove-row.gif",
+        "tools/Data/res/ua.css",
+        "tools/Data/res/viewsource.css",
+        "tools/Data/res/wincharset.properties",
+        "tools/Data/searchplugins/amazondotcom.xml",
+        "tools/Data/searchplugins/answers.xml",
+        "tools/Data/searchplugins/creativecommons.xml",
+        "tools/Data/searchplugins/eBay.xml",
+        "tools/Data/searchplugins/google.xml",
+        "tools/Data/searchplugins/wikipedia.xml",
+        "tools/Data/searchplugins/yahoo.xml",
+        "tools/Data/smime3.dll",
+        "tools/Data/softokn3.chk",
+        "tools/Data/softokn3.dll",
+        "tools/Data/sqlite3.dll",
+        "tools/Data/ssl3.dll",
+        "tools/Data/uninstall/helper.exe",
+        "tools/Data/update.locale",
+        "tools/Data/updater.exe",
+        "tools/Data/updater.ini",
+        "tools/Data/xpcom.dll",
+        "tools/Data/xul.dll",
+        "tools/Host/appstop.exe",
+        "tools/Manifest/firefox.ico",
+        "tools/Manifest/manifest.u3i"
       ]
     },
     "Google.Protobuf/3.21.9": {
@@ -1513,6 +1758,35 @@
         "driver/chromedriver.exe",
         "selenium.chrome.webdriver.85.0.0.nupkg.sha512",
         "selenium.chrome.webdriver.nuspec"
+      ]
+    },
+    "Selenium.Firefox.WebDriver/0.27.0": {
+      "sha512": "HwCaTaa+snzkLF7ZVaxKSmdttKm+KXT7HOY8c1q8p9E7x05+WHqw5XaZjUGFytVT1+0FkgUoH/u/I+csPLeJAg==",
+      "type": "package",
+      "path": "selenium.firefox.webdriver/0.27.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Selenium.Firefox.WebDriver.targets",
+        "driver/geckodriver.exe",
+        "selenium.firefox.webdriver.0.27.0.nupkg.sha512",
+        "selenium.firefox.webdriver.nuspec"
+      ]
+    },
+    "Selenium.Mozilla.Firefox.Webdriver/0.6.0.1": {
+      "sha512": "gW7ODClQCQNr146qkcTx5RiOeSsrahQ4B5nUNk3NDXVQ4T1i9yPGd66NomRcuszOCJj3XNc/0xmUz27/0xYovA==",
+      "type": "package",
+      "path": "selenium.mozilla.firefox.webdriver/0.6.0.1",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Driver/wires-0.6.0-win.exe",
+        "content/Readme.txt",
+        "selenium.mozilla.firefox.webdriver.0.6.0.1.nupkg.sha512",
+        "selenium.mozilla.firefox.webdriver.nuspec",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
       ]
     },
     "Selenium.Support/4.16.2": {
@@ -2771,6 +3045,35 @@
         "version.txt"
       ]
     },
+    "WebDriver.ChromeDriver/26.14.313457.1": {
+      "sha512": "/d6N/cxrAUaApPE9kp4km/ivMowlg7TSmgmYJL9fcUFa+Hq6pgCDlxO8aDlczW1cwdQG7lbDsQpnXduyUQbJqw==",
+      "type": "package",
+      "path": "webdriver.chromedriver/26.14.313457.1",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "tools/ChromeDriver.exe",
+        "webdriver.chromedriver.26.14.313457.1.nupkg.sha512",
+        "webdriver.chromedriver.nuspec"
+      ]
+    },
+    "WebDriverChromeDriver/2.10.0": {
+      "sha512": "OWQLYlmWe1ZKTn+nZ7PDxeoiHoJ8Ctm0ZrWl/s2ahebf1MPF9E8kly/8TnYdarQ8xNzQc+TUHSb/aM9E7AwYLA==",
+      "type": "package",
+      "path": "webdriverchromedriver/2.10.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/chromedriver-license.txt",
+        "tools/chromedriver.exe",
+        "tools/install.ps1",
+        "tools/uninstall.ps1",
+        "webdriverchromedriver.2.10.0.nupkg.sha512",
+        "webdriverchromedriver.nuspec"
+      ]
+    },
     "ZstdSharp.Port/0.7.1": {
       "sha512": "Idgg+mJEyAujqDPzA3APy9dNoyw0YQcNA65GgYjktDRtJ+nvx/hv+J+m6Eax3JJMGEYGy04oc5YNP6ZvQ3Y1vQ==",
       "type": "package",
@@ -2794,10 +3097,13 @@
     "net6.0": [
       "Chromium.ChromeDriver >= 2.37.0",
       "DotNetSeleniumExtras.WaitHelpers >= 3.11.0",
+      "Firefox >= 3.6.6",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.19.4",
       "MySql.Data >= 8.2.0",
       "Newtonsoft.Json >= 13.0.3",
       "Selenium.Chrome.WebDriver >= 85.0.0",
+      "Selenium.Firefox.WebDriver >= 0.27.0",
+      "Selenium.Mozilla.Firefox.Webdriver >= 0.6.0.1",
       "Selenium.Support >= 4.16.2",
       "Selenium.WebDriver >= 4.16.2",
       "Selenium.WebDriver.ChromeDriver >= 120.0.6099.10900",
@@ -2805,7 +3111,9 @@
       "Swashbuckle.AspNetCore.Swagger >= 6.5.0",
       "Swashbuckle.AspNetCore.SwaggerGen >= 6.5.0",
       "Swashbuckle.AspNetCore.SwaggerUI >= 6.5.0",
-      "System.Data.SqlClient >= 4.8.5"
+      "System.Data.SqlClient >= 4.8.5",
+      "WebDriver.ChromeDriver >= 26.14.313457.1",
+      "WebDriverChromeDriver >= 2.10.0"
     ]
   },
   "packageFolders": {
@@ -2855,6 +3163,10 @@
             "target": "Package",
             "version": "[3.11.0, )"
           },
+          "Firefox": {
+            "target": "Package",
+            "version": "[3.6.6, )"
+          },
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
             "target": "Package",
             "version": "[1.19.4, )"
@@ -2870,6 +3182,14 @@
           "Selenium.Chrome.WebDriver": {
             "target": "Package",
             "version": "[85.0.0, )"
+          },
+          "Selenium.Firefox.WebDriver": {
+            "target": "Package",
+            "version": "[0.27.0, )"
+          },
+          "Selenium.Mozilla.Firefox.Webdriver": {
+            "target": "Package",
+            "version": "[0.6.0.1, )"
           },
           "Selenium.Support": {
             "target": "Package",
@@ -2902,6 +3222,14 @@
           "System.Data.SqlClient": {
             "target": "Package",
             "version": "[4.8.5, )"
+          },
+          "WebDriver.ChromeDriver": {
+            "target": "Package",
+            "version": "[26.14.313457.1, )"
+          },
+          "WebDriverChromeDriver": {
+            "target": "Package",
+            "version": "[2.10.0, )"
           }
         },
         "imports": [
