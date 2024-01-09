@@ -47,7 +47,7 @@ namespace IeIAPI
             {
 
                 // Ruta al archivo CSV
-              
+
 
 
 
@@ -60,7 +60,7 @@ namespace IeIAPI
                 List<Localidad> loc = new List<Localidad>();
                 List<Provincia> prov = new List<Provincia>();
                 List<Centro_Educativo> cen = new List<Centro_Educativo>();
-                using (IWebDriver driver = new FirefoxDriver())
+                using (IWebDriver driver = new ChromeDriver(options))
                 {
                     driver.Manage().Timeouts().PageLoad.Add(TimeSpan.FromSeconds(90000));
                     driver.Manage().Timeouts().AsynchronousJavaScript.Add(TimeSpan.FromSeconds(900000));
@@ -122,7 +122,7 @@ namespace IeIAPI
                         else
                         {
                             error = true;
-                            Console.WriteLine("Error encontrado en el elemento " + i + " de los datos CSV al intentar transformar el tipo");
+                            Console.WriteLine("Error encontrado en el elemento " + values[3] + " de los datos CSV al intentar transformar el tipo");
                         }
 
                         //Codigo postal
@@ -137,7 +137,7 @@ namespace IeIAPI
                             else
                             {
                                 error = true;
-                                Console.WriteLine("Error encontrado en el elemento " + i + " de los datos CSV al intentar transformar el codigo postal");
+                                Console.WriteLine("Error encontrado en el elemento " + values[3] + " de los datos CSV al intentar transformar el codigo postal");
                             }
                         }
                         else
