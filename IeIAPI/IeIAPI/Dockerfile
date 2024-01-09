@@ -13,6 +13,9 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS install-dependencies
 WORKDIR /app
 
 RUN apt-get update && apt-get install -y \
+    libgtk-3-0 \
+    libdbus-glib-1-2 \
+    libxt6 \
     wget \
     unzip \
     libgdiplus \

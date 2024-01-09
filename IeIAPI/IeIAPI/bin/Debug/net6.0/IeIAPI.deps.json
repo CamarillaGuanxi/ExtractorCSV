@@ -8,16 +8,30 @@
     ".NETCoreApp,Version=v6.0": {
       "IeIAPI/1.0.0": {
         "dependencies": {
+          "Chromium.ChromeDriver": "2.37.0",
           "DotNetSeleniumExtras.WaitHelpers": "3.11.0",
+          "Firefox": "3.6.6",
+          "Geckofx45": "45.0.34",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.19.4",
           "MySql.Data": "8.2.0",
           "Newtonsoft.Json": "13.0.3",
           "Selenium.Chrome.WebDriver": "85.0.0",
+          "Selenium.Firefox.WebDriver": "0.27.0",
+          "Selenium.Mozilla.Firefox.Webdriver": "0.6.0.1",
           "Selenium.Support": "4.16.2",
           "Selenium.WebDriver": "4.16.2",
           "Selenium.WebDriver.ChromeDriver": "120.0.6099.10900",
+          "Selenium.WebDriver.GeckoDriver": "0.34.0",
+          "Selenium.WebDriver.GeckoDriver.Win64": "0.34.0",
+          "Selenium.WebDriver.IEDriver": "4.14.0",
+          "Selenium.WebDriverBackedSelenium": "4.1.0",
           "Swashbuckle.AspNetCore": "6.5.0",
-          "System.Data.SqlClient": "4.8.5"
+          "Swashbuckle.AspNetCore.Swagger": "6.5.0",
+          "Swashbuckle.AspNetCore.SwaggerGen": "6.5.0",
+          "Swashbuckle.AspNetCore.SwaggerUI": "6.5.0",
+          "System.Data.SqlClient": "4.8.5",
+          "WebDriver.ChromeDriver": "26.14.313457.1",
+          "WebDriverChromeDriver": "2.10.0"
         },
         "runtime": {
           "IeIAPI.dll": {}
@@ -31,6 +45,7 @@
           }
         }
       },
+      "Chromium.ChromeDriver/2.37.0": {},
       "DotNetSeleniumExtras.WaitHelpers/3.11.0": {
         "dependencies": {
           "Selenium.WebDriver": "4.16.2"
@@ -42,6 +57,8 @@
           }
         }
       },
+      "Firefox/3.6.6": {},
+      "Geckofx45/45.0.34": {},
       "Google.Protobuf/3.21.9": {
         "runtime": {
           "lib/net5.0/Google.Protobuf.dll": {
@@ -209,6 +226,8 @@
         }
       },
       "Selenium.Chrome.WebDriver/85.0.0": {},
+      "Selenium.Firefox.WebDriver/0.27.0": {},
+      "Selenium.Mozilla.Firefox.Webdriver/0.6.0.1": {},
       "Selenium.Support/4.16.2": {
         "dependencies": {
           "Selenium.WebDriver": "4.16.2"
@@ -232,6 +251,20 @@
         }
       },
       "Selenium.WebDriver.ChromeDriver/120.0.6099.10900": {},
+      "Selenium.WebDriver.GeckoDriver/0.34.0": {},
+      "Selenium.WebDriver.GeckoDriver.Win64/0.34.0": {},
+      "Selenium.WebDriver.IEDriver/4.14.0": {},
+      "Selenium.WebDriverBackedSelenium/4.1.0": {
+        "dependencies": {
+          "Selenium.WebDriver": "4.16.2"
+        },
+        "runtime": {
+          "lib/net5.0/Selenium.WebDriverBackedSelenium.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore/6.5.0": {
         "dependencies": {
           "Microsoft.Extensions.ApiDescription.Server": "6.0.5",
@@ -498,6 +531,8 @@
           }
         }
       },
+      "WebDriver.ChromeDriver/26.14.313457.1": {},
+      "WebDriverChromeDriver/2.10.0": {},
       "ZstdSharp.Port/0.7.1": {
         "runtime": {
           "lib/net6.0/ZstdSharp.dll": {
@@ -521,12 +556,33 @@
       "path": "bouncycastle.cryptography/2.2.1",
       "hashPath": "bouncycastle.cryptography.2.2.1.nupkg.sha512"
     },
+    "Chromium.ChromeDriver/2.37.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-p/5WFR9H4RN4/oTC4z1TWXVjJ94N+Tp9F5PBE5LcmGf17uh5Xvt9UkjyEnUgRPjMG+zHyDmBVxR6Zi0/1Npkqg==",
+      "path": "chromium.chromedriver/2.37.0",
+      "hashPath": "chromium.chromedriver.2.37.0.nupkg.sha512"
+    },
     "DotNetSeleniumExtras.WaitHelpers/3.11.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-xc6jVVl5ymgk3ZNWnC/KHxkEup1QpnwYbrwF+NQoCOGERsD8YMlLwmsX4lGhLXCLo/YQTRTIwlKCN9E/doGUNg==",
       "path": "dotnetseleniumextras.waithelpers/3.11.0",
       "hashPath": "dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512"
+    },
+    "Firefox/3.6.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nFst3tW1aa10pA5aT0mg/R1QfEqJof4AvzAR7Hza0wWMhdIHwENlfbmYFofIq3+qu7RiQKPXyc5yvMSUCPUVhg==",
+      "path": "firefox/3.6.6",
+      "hashPath": "firefox.3.6.6.nupkg.sha512"
+    },
+    "Geckofx45/45.0.34": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-K2ltmTpuxGomhxC3xI3YUoT+HKdL4bm9bRfUXLv7mD5I4PA3d4S6ue2BZGwa3TEOIAC5rn1xjNDoXb1TDVEgxw==",
+      "path": "geckofx45/45.0.34",
+      "hashPath": "geckofx45.45.0.34.nupkg.sha512"
     },
     "Google.Protobuf/3.21.9": {
       "type": "package",
@@ -654,6 +710,20 @@
       "path": "selenium.chrome.webdriver/85.0.0",
       "hashPath": "selenium.chrome.webdriver.85.0.0.nupkg.sha512"
     },
+    "Selenium.Firefox.WebDriver/0.27.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HwCaTaa+snzkLF7ZVaxKSmdttKm+KXT7HOY8c1q8p9E7x05+WHqw5XaZjUGFytVT1+0FkgUoH/u/I+csPLeJAg==",
+      "path": "selenium.firefox.webdriver/0.27.0",
+      "hashPath": "selenium.firefox.webdriver.0.27.0.nupkg.sha512"
+    },
+    "Selenium.Mozilla.Firefox.Webdriver/0.6.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gW7ODClQCQNr146qkcTx5RiOeSsrahQ4B5nUNk3NDXVQ4T1i9yPGd66NomRcuszOCJj3XNc/0xmUz27/0xYovA==",
+      "path": "selenium.mozilla.firefox.webdriver/0.6.0.1",
+      "hashPath": "selenium.mozilla.firefox.webdriver.0.6.0.1.nupkg.sha512"
+    },
     "Selenium.Support/4.16.2": {
       "type": "package",
       "serviceable": true,
@@ -674,6 +744,34 @@
       "sha512": "sha512-wCOew6C9ABCRK59DdzdJyoQKmVQEUrVQEvoDQdhnLWpW1OkFKG5pd9EK6B3j2vcqdNTBNM6++tAOhBMFezHm3w==",
       "path": "selenium.webdriver.chromedriver/120.0.6099.10900",
       "hashPath": "selenium.webdriver.chromedriver.120.0.6099.10900.nupkg.sha512"
+    },
+    "Selenium.WebDriver.GeckoDriver/0.34.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eRCqp63F975z+bAZqAAb3exiDrcoWwJWHaO5wvMd9OPPd3akc8JorDvweKnF4/DKA8KFNspHGj+4zWz7Zlwguw==",
+      "path": "selenium.webdriver.geckodriver/0.34.0",
+      "hashPath": "selenium.webdriver.geckodriver.0.34.0.nupkg.sha512"
+    },
+    "Selenium.WebDriver.GeckoDriver.Win64/0.34.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-D2DcrR8AsAUwAWDE0QEV9ZzgBEwRAtdDxkLqaUD8Scec5YKM7qP5AQv0kaA7gQ2v6AzPS6N5hA9t43nT6h7wdA==",
+      "path": "selenium.webdriver.geckodriver.win64/0.34.0",
+      "hashPath": "selenium.webdriver.geckodriver.win64.0.34.0.nupkg.sha512"
+    },
+    "Selenium.WebDriver.IEDriver/4.14.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1oylYTK0wHXnmMC5aUH8Qf80PCKTfizLYyOrQkokf1l+FbRzAifM9R3U76V3tq+BhIwx5AUc+pboC0YZ5CnIVg==",
+      "path": "selenium.webdriver.iedriver/4.14.0",
+      "hashPath": "selenium.webdriver.iedriver.4.14.0.nupkg.sha512"
+    },
+    "Selenium.WebDriverBackedSelenium/4.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tQ9iDx/oo4gl1N5JFz1YrwuxYz7XA8pgkiqyUvED6xUFhQualUzgWlfjymhPwdBx5uRYAJWro6w063Yt2P3Y4g==",
+      "path": "selenium.webdriverbackedselenium/4.1.0",
+      "hashPath": "selenium.webdriverbackedselenium.4.1.0.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/6.5.0": {
       "type": "package",
@@ -863,6 +961,20 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
+    },
+    "WebDriver.ChromeDriver/26.14.313457.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/d6N/cxrAUaApPE9kp4km/ivMowlg7TSmgmYJL9fcUFa+Hq6pgCDlxO8aDlczW1cwdQG7lbDsQpnXduyUQbJqw==",
+      "path": "webdriver.chromedriver/26.14.313457.1",
+      "hashPath": "webdriver.chromedriver.26.14.313457.1.nupkg.sha512"
+    },
+    "WebDriverChromeDriver/2.10.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OWQLYlmWe1ZKTn+nZ7PDxeoiHoJ8Ctm0ZrWl/s2ahebf1MPF9E8kly/8TnYdarQ8xNzQc+TUHSb/aM9E7AwYLA==",
+      "path": "webdriverchromedriver/2.10.0",
+      "hashPath": "webdriverchromedriver.2.10.0.nupkg.sha512"
     },
     "ZstdSharp.Port/0.7.1": {
       "type": "package",
