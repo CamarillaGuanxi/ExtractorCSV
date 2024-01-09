@@ -53,14 +53,14 @@ namespace IeIAPI
 
                 // Crear una lista para almacenar los objetos mapeados
                 var dataList = new List<object>();
-                var options = new ChromeOptions();
+                var options = new FirefoxOptions();
                 Boolean error = false;
                 Boolean corregido = false;
                 options.AddArgument("--headless"); // Modo sin interfaz gráfica
                 List<Localidad> loc = new List<Localidad>();
                 List<Provincia> prov = new List<Provincia>();
                 List<Centro_Educativo> cen = new List<Centro_Educativo>();
-                using (IWebDriver driver = new ChromeDriver())
+                using (IWebDriver driver = new FirefoxDriver())
                 {
                     driver.Manage().Timeouts().PageLoad.Add(TimeSpan.FromSeconds(90000));
                     driver.Manage().Timeouts().AsynchronousJavaScript.Add(TimeSpan.FromSeconds(900000));

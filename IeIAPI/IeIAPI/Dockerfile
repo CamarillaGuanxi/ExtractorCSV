@@ -71,7 +71,8 @@ WORKDIR /app
 
 # Copiar los archivos publicados desde la fase de publicación
 COPY --from=publish /app/publish .
-
+# Actualizar configuración de enlace dinámico
+RUN ldconfig
 # Exponer los puertos
 EXPOSE 5000
 EXPOSE 56581
