@@ -1,13 +1,3 @@
-# Etapa de construcción
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
-WORKDIR /src
-
-COPY ./IeIAPI.csproj .
-RUN dotnet restore
-
-COPY . .
-RUN dotnet build -c Release -o /app/build
-
 # Etapa intermedia para instalar dependencias
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS install-dependencies
 WORKDIR /app
@@ -42,6 +32,7 @@ RUN apt-get update && apt-get install -y \
     libharfbuzz-icu0 \
     libfontconfig1 \
     libc6 \
+    libgtk-3-0 \
     xvfb \
     && rm -rf /var/lib/apt/lists/*
 

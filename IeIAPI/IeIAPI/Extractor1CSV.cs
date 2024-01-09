@@ -60,7 +60,7 @@ namespace IeIAPI
                 List<Localidad> loc = new List<Localidad>();
                 List<Provincia> prov = new List<Provincia>();
                 List<Centro_Educativo> cen = new List<Centro_Educativo>();
-                using (IWebDriver driver = new FirefoxDriver())
+                using (IWebDriver driver = new ChromeDriver())
                 {
                     driver.Manage().Timeouts().PageLoad.Add(TimeSpan.FromSeconds(90000));
                     driver.Manage().Timeouts().AsynchronousJavaScript.Add(TimeSpan.FromSeconds(900000));
