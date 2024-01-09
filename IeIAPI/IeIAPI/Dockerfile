@@ -8,16 +8,12 @@ RUN dotnet restore
 COPY . .
 RUN dotnet build -c Release -o /app/build
 
-# Use ADD to copy CSV and XML files
-COPY ./CV.csv .
-COPY ./CAT.xml .
-
 # Etapa intermedia para instalar dependencias
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS install-dependencies
 WORKDIR /app
 
-
 RUN apt-get update && apt-get install -y \
+    wget \
     unzip \
     libgdiplus \
     libxss1 \
@@ -49,14 +45,10 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Download and install Chrome
-RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
-    && sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list' \
+RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | gpg --dearmor -o /usr/share/keyrings/google-chrome-archive-keyring.gpg \
+    && echo "signed-by /usr/share/keyrings/google-chrome-archive-keyring.gpg" > /etc/apt/trusted.gpg.d/google-chrome-archive-keyring.gpg \
+    && echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome-archive-keyring.gpg] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list \
     && apt-get update && apt-get install -y google-chrome-stable
-RUN Install-Package Selenium.WebDriver
-# Set Chrome as the default browser for Selenium
-ENV ASPNETCORE_DEFAULT_BROWSER=chrome
-
-
 
 # Etapa de publicación
 FROM build AS publish
