@@ -45,11 +45,14 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Download and install Chrome
-RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | gpg --dearmor -o /usr/share/keyrings/google-chrome-archive-keyring.gpg \
+# Download and install Chrome
+RUN apt-get update \
+    && apt-get install -y gnupg \
+    && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | gpg --dearmor -o /usr/share/keyrings/google-chrome-archive-keyring.gpg \
     && echo "signed-by /usr/share/keyrings/google-chrome-archive-keyring.gpg" > /etc/apt/trusted.gpg.d/google-chrome-archive-keyring.gpg \
     && echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome-archive-keyring.gpg] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list \
-    && apt-get update && apt-get install -y google-chrome-stable
-
+    && apt-get update \
+    && apt-get install -y google-chrome-stable
 # Etapa de publicación
 FROM build AS publish
 RUN dotnet publish -c Release -o /app/publish /p:UseAppHost=false
