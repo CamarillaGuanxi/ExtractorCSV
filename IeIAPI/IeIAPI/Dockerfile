@@ -2,7 +2,7 @@
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 
-COPY ./IeIAPI.csproj .
+COPY ./ExtractorCSV.csproj .
 RUN dotnet restore
 
 COPY . .
@@ -41,4 +41,4 @@ COPY --from=install-dependencies /usr/bin/google-chrome-stable /usr/bin/
 # Definir el punto de entrada para la aplicación
 EXPOSE 5000
 EXPOSE 56581
-CMD ["dotnet", "IeIAPI.dll"]
+CMD ["dotnet", "IeICarga.dll"]
