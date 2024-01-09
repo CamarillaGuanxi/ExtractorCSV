@@ -1,4 +1,3 @@
-# Etapa de construcción
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 
@@ -13,14 +12,14 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS publish
 WORKDIR /app
 COPY --from=build /app/build .
 
-# Etapa final
-FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS final
-WORKDIR /app
+# Etapa final con Selenium y ChromeDriver
+FROM selenium/standalone-chrome:latest AS final
+USER root
 
-# Copiar los archivos publicados desde la fase de publicación
+WORKDIR /app
 COPY --from=publish /app .
 
-# Exponer los puertos
+# Exponer el puerto de la aplicación
 EXPOSE 80
 
 # Comando para ejecutar la aplicación al iniciar el contenedor

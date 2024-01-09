@@ -10,5 +10,6 @@
     <Import Project="$(NuGetPackageRoot)selenium.firefox.webdriver\0.27.0\build\Selenium.Firefox.WebDriver.targets" Condition="Exists('$(NuGetPackageRoot)selenium.firefox.webdriver\0.27.0\build\Selenium.Firefox.WebDriver.targets')" />
     <Import Project="$(NuGetPackageRoot)selenium.chrome.webdriver\85.0.0\build\Selenium.Chrome.WebDriver.targets" Condition="Exists('$(NuGetPackageRoot)selenium.chrome.webdriver\85.0.0\build\Selenium.Chrome.WebDriver.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.visualstudio.azure.containers.tools.targets\1.19.4\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.visualstudio.azure.containers.tools.targets\1.19.4\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets')" />
+    <Import Project="$(NuGetPackageRoot)geckofx45\45.0.34\build\Geckofx45.targets" Condition="Exists('$(NuGetPackageRoot)geckofx45\45.0.34\build\Geckofx45.targets')" />
   </ImportGroup>
 </Project>

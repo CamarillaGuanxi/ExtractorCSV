@@ -33,6 +33,12 @@
       "Firefox/3.6.6": {
         "type": "package"
       },
+      "Geckofx45/45.0.34": {
+        "type": "package",
+        "build": {
+          "build/Geckofx45.targets": {}
+        }
+      },
       "Google.Protobuf/3.21.9": {
         "type": "package",
         "compile": {
@@ -1122,6 +1128,43 @@
         "tools/Host/appstop.exe",
         "tools/Manifest/firefox.ico",
         "tools/Manifest/manifest.u3i"
+      ]
+    },
+    "Geckofx45/45.0.34": {
+      "sha512": "K2ltmTpuxGomhxC3xI3YUoT+HKdL4bm9bRfUXLv7mD5I4PA3d4S6ue2BZGwa3TEOIAC5rn1xjNDoXb1TDVEgxw==",
+      "type": "package",
+      "path": "geckofx45/45.0.34",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Geckofx45.targets",
+        "content/Firefox/AccessibleMarshal.dll",
+        "content/Firefox/breakpadinjector.dll",
+        "content/Firefox/d3dcompiler_47.dll",
+        "content/Firefox/freebl3.dll",
+        "content/Firefox/icudt58.dll",
+        "content/Firefox/icuin58.dll",
+        "content/Firefox/icuuc58.dll",
+        "content/Firefox/lgpllibs.dll",
+        "content/Firefox/libEGL.dll",
+        "content/Firefox/libGLESv2.dll",
+        "content/Firefox/mozglue.dll",
+        "content/Firefox/nss3.dll",
+        "content/Firefox/nssckbi.dll",
+        "content/Firefox/nssdbm3.dll",
+        "content/Firefox/omni.ja",
+        "content/Firefox/plugin-container.exe",
+        "content/Firefox/plugin-hang-ui.exe",
+        "content/Firefox/sandboxbroker.dll",
+        "content/Firefox/softokn3.dll",
+        "content/Firefox/xul.dll",
+        "geckofx45.45.0.34.nupkg.sha512",
+        "geckofx45.nuspec",
+        "lib/Geckofx-Core.dll.config",
+        "lib/net45/Geckofx-Core.dll",
+        "lib/net45/Geckofx-Core.pdb",
+        "lib/net45/Geckofx-Winforms.dll",
+        "lib/net45/Geckofx-Winforms.pdb"
       ]
     },
     "Google.Protobuf/3.21.9": {
@@ -3177,6 +3220,7 @@
       "Chromium.ChromeDriver >= 2.37.0",
       "DotNetSeleniumExtras.WaitHelpers >= 3.11.0",
       "Firefox >= 3.6.6",
+      "Geckofx45 >= 45.0.34",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.19.4",
       "MySql.Data >= 8.2.0",
       "Newtonsoft.Json >= 13.0.3",
@@ -3248,6 +3292,10 @@
           "Firefox": {
             "target": "Package",
             "version": "[3.6.6, )"
+          },
+          "Geckofx45": {
+            "target": "Package",
+            "version": "[45.0.34, )"
           },
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
             "target": "Package",
